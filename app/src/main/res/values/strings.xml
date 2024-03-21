@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="action_settings">Paramètres</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Calendrier</string>
+    <string name="second_fragment_label">Ajouter un évènement</string>
+    <string name="next">Ajouter un évènement</string>
+    <string name="previous">Précédent</string>
+    <string name="validation">Valider</string>
+    <string name="heure">Horaire (ex 16-18)</string>
+    <string name="nom">Nom de l\'évènement (ex : Foot)</string>
+</resources>

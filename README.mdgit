@@ -1,0 +1,2 @@
+"# tp-devmo-leonard_segonds"  initgit add README.mdgit commit -m "first commit"git branch -M maingit remote add origin https://github.com/ECN-info-MEDEV/tp-devmo-leonard_segonds.gitgit push -u origin main
+"# tp-devmo-leonard_segonds"  initgit add README.mdgit commit -m "first commit"git branch -M maingit remote add origin https://github.com/ECN-info-MEDEV/tp-devmo-leonard_segonds.gitgit push -u origin main
