@@ -1,12 +1,10 @@
 package com.example.myapplication
 
-import MyViewModel
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.FragmentSecondBinding
 
@@ -16,8 +14,6 @@ import com.example.myapplication.databinding.FragmentSecondBinding
 class SecondFragment : Fragment() {
 
     private var _binding: FragmentSecondBinding? = null
-    private val viewModel: MyViewModel by viewModels()
-
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -37,13 +33,17 @@ class SecondFragment : Fragment() {
 
         binding.buttonSecond.setOnClickListener {
             // Récupérer les données des champs de saisie
-            val heure = binding.editTextHeure.text.toString()
+            val spinner1 = binding.spinnerJour
+            val jour =spinner1.selectedItem.toString()
+            val spinner2 = binding.spinnerHeure
+            val heure =spinner2.selectedItem.toString()
             val nom = binding.editTextNom.text.toString()
-            // Mettre à jour les valeurs dans le ViewModel
-            viewModel.savedStateHandle.set("heure_key", heure)
-            viewModel.savedStateHandle.set("nom_key", nom)
-            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
 
+            // Créer une instance de l'action de navigation avec les arguments
+            val action = SecondFragmentDirections.actionSecondFragmentToFirstFragment(jour,heure, nom)
+
+            // Naviguer vers FirstFragment en passant l'action avec les arguments
+            findNavController().navigate(action)
         }
     }
 

@@ -7,6 +7,26 @@
     <string name="next">Ajouter un évènement</string>
     <string name="previous">Précédent</string>
     <string name="validation">Valider</string>
-    <string name="heure">Horaire (ex 16-18)</string>
-    <string name="nom">Nom de l\'évènement (ex : Foot)</string>
+    <string name="heure">Horaire</string>
+    <string name="nom">Nom de l\'évènement</string>
+    <string name="jour">Jour</string>
+    <string-array name="heures_array">
+        <item>6h-8h</item>
+        <item>8h-10h</item>
+        <item>10h-12</item>
+        <item>12h-14h</item>
+        <item>14h-16h</item>
+        <item>16h-18h</item>
+        <item>18h-20h</item>
+        <item>20h-22h</item>
+    </string-array>
+    <string-array name="jours_array" >
+        <item>Lundi</item>
+        <item>Mardi</item>
+        <item>Mercredi</item>
+        <item>Jeudi</item>
+        <item>Vendredi</item>
+        <item>Samedi</item>
+        <item>Dimanche</item>
+    </string-array>
 </resources>

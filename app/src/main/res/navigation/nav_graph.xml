@@ -13,7 +13,8 @@
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            app:destination="@id/SecondFragment" >
+        </action>
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -26,12 +27,16 @@
             app:destination="@id/FirstFragment">
             <!-- Ajoutez des arguments pour transmettre les données -->
             <argument
+                android:name="jour"
+                app:argType="string" />
+            <argument
                 android:name="heure"
                 app:argType="string" />
             <argument
                 android:name="nom"
                 app:argType="string" />
         </action>
+
     </fragment>
 
 </navigation>

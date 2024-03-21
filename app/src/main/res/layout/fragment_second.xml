@@ -11,46 +11,56 @@
         android:layout_height="match_parent"
         android:padding="16dp">
 
-        <!-- Ajoutez le CalendarView ici -->
-        <CalendarView
-            android:id="@+id/calendarView"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textview_second_jour"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/jour"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="16dp" />
+
+        <Spinner
+            android:id="@+id/spinnerJour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/textview_second_jour"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"
+            android:entries="@array/jours_array" />
+
         <TextView
             android:id="@+id/textview_second_heure"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/heure"
-            app:layout_constraintTop_toBottomOf="@id/calendarView"
+            app:layout_constraintTop_toBottomOf="@id/spinnerJour"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="16dp" />
 
-        <!-- Zone d'entrée pour l'heure -->
-        <EditText
-            android:id="@+id/editTextHeure"
+        <Spinner
+            android:id="@+id/spinnerHeure"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/textview_second_heure"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:entries="@array/heures_array" />
 
         <TextView
             android:id="@+id/textview_second_nom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/nom"
-            app:layout_constraintTop_toBottomOf="@id/editTextHeure"
+            app:layout_constraintTop_toBottomOf="@id/spinnerHeure"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="16dp" />
 
-        <!-- Zone d'entrée pour le nom -->
         <EditText
             android:id="@+id/editTextNom"
             android:layout_width="match_parent"
